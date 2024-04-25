@@ -19,20 +19,20 @@ def phish():
           ╚═╝     ╚═╝  ╚═╝╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝ 
                                                          
   |--------------------------------------------------------------------------------------------|
-  | [1] SayCheese - Herramienta Para Obtener IP Y Una Captura Por Medio De La WebCam.          |
-  | [2] Zphisher  - Herramienta Con Mas De 30 Templates De Paginas Login.                      |
-  | [3] 0ni-Phish - Tool Que Cuenta Con 10 Templates De Paginas Login, 4 De Ellas En Español!! |
-  | [4] PyPhisher - Herramienta CON MAS DE 50 Templates De Paginas Login!!!!                   |
-  | [00] Regresar Al Menu Principal                                                            |
-  | [99] Salir                                                                                 |
+  | [1] SayCheese - Tool For Obtaining IP And Capturing Media Through Webcam.          |
+  | [2] Zphisher  - Tool With More Than 30 Login Page Templates.                      |
+  | [3] 0ni-Phish - Accounts Tool With 10 Login Page Templates, 4 De Ellas En Español!! |
+  | [4] PyPhisher - Too With More Than 50 LOgin Page Templates!!!!                   |
+  | [00] Return To Main Menu                                                            |
+  | [99] Quit                                                                                 |
   |--------------------------------------------------------------------------------------------|
   """)
   var = input(f'\n{Fore.CYAN}root@fuckyou:~# ')
   # SayCheese ---
   if var == "1":
     if os.path.exists('tools/saycheese'):
-      print(f'\n{Fore.RED}[!] SayCheese ya existe')
-      ques = input(f'\n{Fore.GREEN}[?] Quieres iniciar la herramienta [Y/n]: ')
+      print(f'\n{Fore.RED}[!] SayCheese Already Exists')
+      ques = input(f'\n{Fore.GREEN}[?] Do you want to start the tool [Y/n]: ')
       if ques == "Y" or ques == "y":
         os.system("bash tools/saycheese/saycheese.sh")
       elif ques == "N" or ques == "n":
@@ -41,18 +41,18 @@ def phish():
         phish()
     else:
       if platform.system() == "Linux":
-        print(f'\n{Fore.GREEN}[~] Instalando SayCheese...')
+        print(f'\n{Fore.GREEN}[~] Installing SayCheese...')
         os.system("git clone https://github.com/hangetzzu/saycheese && mv 'saycheese' tools/")
-        print('\n[~] SayCheese instalado con exito.')
+        print('\n[~] SayCheese installed succcessfully.')
         time.sleep(2)
         phish()
       else:
-       print(f'\n{Fore.RED}[!] SayCheese no esta disponible para tu sistema operativo.')
+       print(f'\n{Fore.RED}[!] SayCheese is not available for your Operating System.')
   # Zphisher --
   elif var == "2":
     if os.path.exists('tools/zphisher'):
-      print(f'\n{Fore.RED}[!] Zphisher ya existe')
-      ques = input(f'\n{Fore.GREEN}[?] Quieres iniciar la herramienta [Y/n]: ')
+      print(f'\n{Fore.RED}[!] Zphisher Already Exists')
+      ques = input(f'\n{Fore.GREEN}[?] Do you want to start the tool [Y/n]: ')
       if ques == "Y" or ques == "y":
         os.chdir('tools/zphisher')
         os.system("bash zphisher.sh")
@@ -65,18 +65,18 @@ def phish():
         phish()
     else:
       if platform.system() == "Linux":
-        print(f'\n{Fore.GREEN}[~] Instalando Zphisher...')
+        print(f'\n{Fore.GREEN}[~] Installing Zphisher...')
         os.system("git clone https://github.com/htr-tech/zphisher && mv 'zphisher' tools/")
-        print('\n[~] Zphisher instalado con exito.')
+        print('\n[~] Zphisher installed successfully.')
         time.sleep(2)
         phish()
       else:
-       print(f'\n{Fore.RED}[!] Zphisher no esta disponible para tu sistema operativo.')
+       print(f'\n{Fore.RED}[!] Zphisher is not available for your operating system.')
   # 0ni-Phish  ------
   elif var == "3":
     if os.path.exists('tools/0ni-Phish'):
       print(f'\n{Fore.RED}[!] 0ni-Phish ya existe')
-      ques = input(f'\n{Fore.GREEN}[?] Quieres iniciar la herramienta [Y/n]: ')
+      ques = input(f'\n{Fore.GREEN}[?] Do you want to start the tool [Y/n]: ')
       if ques == "Y" or ques == "y":
         if platform.system() == "Linux":
            os.system("python3 tools/0ni-Phish/0ni.py")
@@ -86,18 +86,18 @@ def phish():
         phish()
     else:
       if platform.system() == "Linux": 
-        print(f'\n{Fore.GREEN}[~] Instalando 0ni-Phish...')
+        print(f'\n{Fore.GREEN}[~] Installing 0ni-Phish...')
         os.system("git clone https://github.com/Euronymou5/0ni-Phish && mv '0ni-Phish' tools/")
-        print('\n[~] 0ni-Phish instalado con exito.')
+        print('\n[~] 0ni-Phish installed successfully.')
         time.sleep(2)
         phish()
       else:
-       print(f'\n{Fore.RED}[!] 0ni-Phish no esta disponible para tu sistema operativo.')
+       print(f'\n{Fore.RED}[!] 0ni-Phish is not available for your operating system.')
   # PyPhisher ----
   elif var == "4":
     if os.path.exists('tools/PyPhisher'):
-      print(f'\n{Fore.RED}[!] Pyphisher ya existe')
-      ques = input(f'\n{Fore.GREEN}[?] Quieres iniciar la herramienta [Y/n]: ')
+      print(f'\n{Fore.RED}[!] Pyphisher already exists')
+      ques = input(f'\n{Fore.GREEN}[?] Do you want to start the tool [Y/n]: ')
       if ques == "Y" or ques == "y":
         if platform.system() == "Linux":
            os.chdir('tools/PyPhisher')
@@ -111,13 +111,13 @@ def phish():
         phish()
     else:
       if platform.system() == "Linux": 
-        print(f'\n{Fore.GREEN}[~] Instalando PyPhisher...')
+        print(f'\n{Fore.GREEN}[~] Installing PyPhisher...')
         os.system("git clone https://github.com/KasRoudra/PyPhisher && mv 'PyPhisher' tools/ && pip3 install -r tools/PyPhisher/files/requirements.txt")
-        print('\n[~] PyPhisher instalado con exito.')
+        print('\n[~] PyPhisher installed successfully.')
         time.sleep(2)
         phish()
       else:
-       print(f'\n{Fore.RED}[!] PyPhisher no esta disponible para tu sistema operativo.')
+       print(f'\n{Fore.RED}[!] PyPhisher is not available for your operating system.')
   # 00
   elif var == "00":
     if platform.system() == "Linux":
@@ -131,6 +131,6 @@ def phish():
     exit()
   # error no input
   else:
-    print(f'\n{Fore.RED}[!] Error opcion invalida.')
+    print(f'\n{Fore.RED}[!] Error Invalid Option.')
     time.sleep(2)
     phish()
