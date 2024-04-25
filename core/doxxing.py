@@ -19,21 +19,21 @@ def doxxer():
         █     ▐             ▄▀  ▄▀     ▄▀  ▄▀   █       █ █    ▐   ▐         
         ▐                  █    ▐     █    ▐    ▐       ▐ ▐                  
   |--------------------------------------------------------------------------------------------|
-  | [1] Doxxer-Toolkit - Kit completo de doxxing para linux y termux.                          |
-  | [2] Garuda  - Tool de doxxing para: nombre completo, ip, numero de telefono.               |
-  | [3] LineX - Tool para obtener informacion de un numero de telefono.                        |
-  | [4] IPlogger - IPlogger desde terminal para linux y termux.                                |
-  | [00] Regresar al menu principal                                                            |
-  | [99] Salir                                                                                 |
+  | [1] Doxxer-Toolkit - Kit complete Doxxing for linux and termux.                          |
+  | [2] Garuda  -  Doxxing Toolkit for: full name, IP, phone number.               |
+  | [3] LineX - Tool for obtaining phone number information.                        |
+  | [4] IPlogger - IPlogger from terminal for linux and termux.                                |
+  | [00] Return to main menu                                                            |
+  | [99] Quit                                                                                 |
   |--------------------------------------------------------------------------------------------|
   """)
     var = input(f'\n{Fore.BLUE}root@fuckyou:~# ')
     # Doxxer-toolkit ---
     if var == "1":
         if os.path.exists('tools/Doxxer-Toolkit'):
-            print(f'\n{Fore.RED}[!] Doxxer-Toolkit ya existe')
+            print(f'\n{Fore.RED}[!] Doxxer-Toolkit already exists')
             ques = input(
-                f'\n{Fore.GREEN}[?] Quieres iniciar la herramienta [Y/n]: ')
+                f'\n{Fore.GREEN}[?] Do you want to start the tool [Y/n]: ')
             if ques == "Y" or ques == "y":
                 os.system("python3 tools/Doxxer-Toolkit/dox.py")
             elif ques == "N" or ques == "n":
@@ -42,44 +42,44 @@ def doxxer():
                 doxxer()
         else:
             if platform.system() == "Linux":
-                print(f'\n{Fore.GREEN}[~] Instalando Doxxer-Toolkit...')
+                print(f'\n{Fore.GREEN}[~] Installing Doxxer-Toolkit...')
                 os.system(
                     "git clone https://github.com/Euronymou5/Doxxer-Toolkit && mv 'Doxxer-Toolkit' tools/ && bash tools/Doxxer-Toolkit/install.sh"
                 )
-                print('\n[~] Doxxer-Toolkit instalado con exito.')
+                print('\n[~] Doxxer-Toolkit installed successfully.')
                 time.sleep(2)
                 doxxer()
             else:
                 print(
-                    f'\n{Fore.RED}[!] Doxxer-Toolkit no esta disponible para tu sistema operativo.'
+                    f'\n{Fore.RED}[!] Doxxer-Toolkit is not available for your operating system.'
                 )
     # Garuda --
     elif var == "2":
         if os.path.exists('tools/Garuda'):
-            print(f'\n{Fore.RED}[!] Garuda ya existe')
+            print(f'\n{Fore.RED}[!] Garuda already exists')
             ques = input(
-                f'\n{Fore.GREEN}[?] Quieres iniciar la herramienta [Y/n]: ')
+                f'\n{Fore.GREEN}[?] Do you want to start the tool [Y/n]: ')
             if ques == "Y" or ques == "y":
                 print("""
-        Argumentos:
+        Arguments:
 
-        --name     Doxxear nombre completo
+        --name     Doxxear full name
 
-        --ip       Doxxear una direccion IP
+        --ip       Doxxear IP address
 
-        --mail     Doxxear un email
+        --mail     Doxxear email
 
-        --phone    Doxxear un numero de telefono
+        --phone    Doxxear telephone number
 
-        --user     Doxxear un nombre de usuario
+        --user     Doxxear Username
         """)
                 arg = input(
-                    f'{Fore.BLUE}\n[~] Ingresa un argumento de garuda: ')
+                    f'{Fore.BLUE}\n[~] Enter a garuda argument: ')
                 if arg == "--name" or arg == "--ip" or arg == "--mail" or arg == "--phone" or arg == "--user":
                     os.system(f"python3 tools/Garuda/garuda.py {arg}")
                 else:
                     print(
-                        f'\n{Fore.RED}[!] Error debes ingresar un argumento.')
+                        f'\n{Fore.RED}[!] Error you must enter an argument.')
                     time.sleep(2)
                     doxxer()
             elif ques == "N" or ques == "n":
@@ -88,23 +88,23 @@ def doxxer():
                 doxxer()
         else:
             if platform.system() == "Linux":
-                print(f'\n{Fore.GREEN}[~] Instalando Garuda...')
+                print(f'\n{Fore.GREEN}[~] Installing Garuda...')
                 os.system(
                     "git clone https://github.com/noob-coder123/Garuda && mv 'Garuda' tools/ && pip install -r tools/Garuda/requirements.txt "
                 )
-                print(f'\n[~] Garuda instalado con exito.')
+                print(f'\n[~] Garuda installed successfully.')
                 time.sleep(2)
                 doxxer()
             else:
                 print(
-                    f'\n{Fore.RED}[!] Garuda no esta disponible para tu sistema operativo.'
+                    f'\n{Fore.RED}[!] Garuda is not available for your operating system.'
                 )
     # LineX  ------
     elif var == "3":
         if os.path.exists('tools/LineX'):
-            print(f'\n{Fore.RED}[!] LineX ya existe')
+            print(f'\n{Fore.RED}[!] LineX already exists')
             ques = input(
-                f'\n{Fore.GREEN}[?] Quieres iniciar la herramienta [Y/n]: ')
+                f'\n{Fore.GREEN}[?] Do you want to start the tool [Y/n]: ')
             if ques == "Y" or ques == "y":
                 if platform.system() == "Linux":
                     os.system("python3 tools/LineX/linex.py")
@@ -116,31 +116,31 @@ def doxxer():
                 doxxer()
         else:
             if platform.system() == "Linux":
-                print(f'\n{Fore.GREEN}[~] Instalando LineX...')
+                print(f'\n{Fore.GREEN}[~] Installing LineX...')
                 os.system(
                     "git clone https://github.com/Euronymou5/LineX.git && mv 'LineX' tools/ && pip install requests"
                 )
-                print('\n[~] LineX instalado con exito.')
+                print('\n[~] LineX installed successfully.')
                 time.sleep(2)
                 doxxer()
             elif platform.system() == "Windows":
-                print(f'\n{Fore.GREEN}[~] Instalando LineX...')
+                print(f'\n{Fore.GREEN}[~] Installing LineX...')
                 os.system("git clone https://github.com/Euronymou5/LineX.git")
                 shutil.move("LineX/", "tools")
                 os.system("pip install requests")
-                print('\n[~] LineX instalado con exito.')
+                print('\n[~] LineX installed successfully.')
                 time.sleep(2)
                 doxxer()
             else:
                 print(
-                    f'\n{Fore.RED}[!] LineX no esta disponible para tu sistema operativo.'
+                    f'\n{Fore.RED}[!] LineX is not available for your operating system.'
                 )
     # IPlogger ----
     elif var == "4":
         if os.path.exists('tools/IPlogger'):
-            print(f'\n{Fore.RED}[!] IPlogger ya existe')
+            print(f'\n{Fore.RED}[!] IPlogger already exists')
             ques = input(
-                f'\n{Fore.GREEN}[?] Quieres iniciar la herramienta [Y/n]: ')
+                f'\n{Fore.GREEN}[?] Do you want to start the tool [Y/n]: ')
             if ques == "Y" or ques == "y":
                 os.system("python3 tools/IPlogger/run.py")
             elif ques == "N" or ques == "n":
@@ -149,16 +149,16 @@ def doxxer():
                 doxxer()
         else:
             if platform.system() == "Linux":
-                print(f'\n{Fore.GREEN}[~] Instalando IPlogger...')
+                print(f'\n{Fore.GREEN}[~] Installing IPlogger...')
                 os.system(
                     "git clone https://github.com/Euronymou5/IPlogger && mv 'IPlogger' tools/"
                 )
-                print('\n[~] IPlogger instalado con exito.')
+                print('\n[~] IPlogger installed successfully.')
                 time.sleep(2)
                 doxxer()
             else:
                 print(
-                    f'\n{Fore.RED}[!] IPlogger no esta disponible para tu sistema operativo.'
+                    f'\n{Fore.RED}[!] IPlogger is not available for your operating system.'
                 )
     # 00
     elif var == "00":
@@ -173,6 +173,6 @@ def doxxer():
         exit()
     # error no input
     else:
-        print(f'\n{Fore.RED}[!] Error opcion invalida.')
+        print(f'\n{Fore.RED}[!] Error invalid option.')
         time.sleep(2)
         doxxer()
