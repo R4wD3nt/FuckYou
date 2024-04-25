@@ -1,11 +1,11 @@
 # FuckYou 🖕
 **FuckYou** **BETA v1.0.1**
 
-**~FuckYou es una herramienta multifunciones programada en Python, creada por Spyk3r y Euronymou5**
+**~FuckYou is a multifunctional tool programmed in Python, created by Spyk3r and Euronymou5**
 
 -------------
 
-# Instalación
+# Installation
 
 ## Linux (Debian) / Termux
 
@@ -26,62 +26,62 @@ bash install.sh
 ```
 --------
 
-## Comando Para Iniciar La Herramienta:
+## Command to Start the Tool:
 ```
 python3 fuckyou.py
 ```
 
 --------------
-# Instalación En Windows
+# Installation On Windows
 
-**Primero que todo, debemos estar en el apartado principal del repositorio para despues ubicarnos en el boton Code, lo presionaremos y elegiremos la opción "Download ZIP"**
+**First of all, we must be in the main section of the repository and then go to the Code button, we will press it and choose the "Download ZIP" option**
 
 ![image.png](https://github.com/Euronymou5/FuckYou/blob/main/images/Inicio.PNG)
 
-**Una vez hecho esto procederemos a extraer el archivo .ZIP para que nos deje una carpeta**
+**Once this is done we will proceed to extract the .ZIP file so that it leaves us with a folder**
 
 ![image.png](https://github.com/Euronymou5/FuckYou/blob/main/images/Extraer.PNG)
 
-**Estando dentro de la carpeta extraida, lo unico que haremos sera copiar la ruta en la que esta se encuentra para despues abrir un Símbolo del Sistema (CMD) y ejecutar el siguiente comando:**
+**While inside the extracted folder, the only thing we will do is copy the path where it is located and then open a Command Prompt (CMD) and execute the following command:**
 ```
-cd (ruta de la carpeta)
+cd (folder path)
 ```
-**y despues colocaremos el siguiente comando:** 
+**and then we will place the following command:** 
 ```
 python -m pip install -r requirements.txt
 ```
 
 ![image.png](https://github.com/Euronymou5/FuckYou/blob/main/images/requirements.PNG)
 
-**Despues descargaremos GIT para windows desde:**
+**Then we will download GIT for windows from:**
 
 *https://git-scm.com/download/win*
 
-**Elegiremos las versiones dependiendo de cuantos bits sea su pc:**
+**We will choose the versions depending on how many bits your PC is:**
 
 <img src="https://media.discordapp.net/attachments/995599976463859713/1071719855994183761/image.png?width=191&height=69">
 
-**Cuando termine su instalacion, ejecutaremos su instalador y nos aparecera lo siguiente:**
+**When your installation is finished, we will run your installer and the following will appear:**
 
 <img src="https://media.discordapp.net/attachments/995599976463859713/1071723284271480863/image.png?width=443&height=350">
 
-**Pulsaremos en Next hasta llegar a la siguiente ventana:**
+**We will click on Next until we reach the next window:**
 
 <img src="https://media.discordapp.net/attachments/995599976463859713/1071723648848777236/image.png?width=443&height=348">
 
-**Aqui nos aseguraremos que este marcada la casilla con el nombre "Git from the command line and also from 3rd-party software" y despues seguiremos pulsando next hasta que nos aparezca el boton "install":**
+**Here we will make sure that the box with the name "Git from the command line and also from 3rd-party software" is checked and then we will continue pressing next until the "install" button appears.:**
 
 <img src="https://media.discordapp.net/attachments/995599976463859713/1071725028695097415/image.png?width=445&height=348">
 
-**Y despues esperamos a que termine de instalar.**
+**And then we wait for it to finish installing.**
 
-*Tutorial de como instalar git: https://www.youtube.com/watch?v=cYLapo1FFmA*
+*Tutorial on how to install git: https://www.youtube.com/watch?v=cYLapo1FFmA*
 
-**Hecho esto, solo nos queda abrir el archivo fuckyou.py**
+**Once this is done, we only have to open the file fuckyou.py**
 
 ![image.png](https://github.com/Euronymou5/FuckYou/blob/main/images/fuckyoupy.PNG)
 
-# Y LISTO, ESO SERIA TODO!
+# AND READY, THAT WOULD BE EVERYTHING!
 <img src="https://media.discordapp.net/attachments/995599976463859713/1074434907901800508/image.png?width=758&height=431">
 
 
@@ -107,3 +107,9 @@ python -m pip install -r requirements.txt
 **Euronymou5 (Discord): Euronymou5#3155**
 
 **Spyk3r (Discord): ! Spyk3r#0614**
+
+##########################################
+
+# Traducciones
+
+**Traducido del Español por R4wD3nt**
