@@ -19,47 +19,47 @@ def scan():
                                                                         ███    ███ 
 
   |--------------------------------------------------------------------------------------------|
-  | [1] Escaneo de Puertos                                                                     |
-  | [2] Escaneo de Puertos Especificos                                                         |
-  | [3] Escaneo de Puertos Con Version                                                         |
-  | [4] Escaneo de Puertos Con Deteccion de Sistema Operativo                                  |
-  | [5] Escaneo Rapido (Solo Puertos Abiertos)                                                 |
-  | [6] Escaneo de Sub-Red                                                                     |
-  | [7] Escaneo Silencioso                                                                     |
-  | [8] Escaneo TCP Sincronizado                                                               |
-  | [9] Escaneo UDP                                                                            |
-  | [00] Regresar Al Menu Principal                                                            |
-  | [99] Salir                                                                                 |
+  | [1] Scan All Ports                                                                     |
+  | [2] Scan Specific Ports                                                         |
+  | [3] Scan Ports With Version                                                         |
+  | [4] Scan Ports With O.S Detection                                                          |
+  | [5] Fast Scan (Only Open Ports)                                                            |
+  | [6] Subnet Scan                                                                           |
+  | [7] Silent/Stealth Scan                                                                    |
+  | [8] Synched TCP Scan                                                                       |
+  | [9] Scan UDP                                                                               |
+  | [00] Return to Main Menu                                                                   |
+  | [99] Quit                                                                                  |
   |--------------------------------------------------------------------------------------------|
     """)
     var = input(f'\n{Fore.CYAN}root@fuckyou:~# ')
     if var == "1":
-      target = input("\n[~] Ingrese el host o IP a escanear: ")
+      target = input("\n[~] Enter the host or IP to Scan: ")
       os.system(f"nmap {target}")
     elif var == "2":
-       target = input("\n[~] Ingrese el host o IP a escanear: ")
-       ports = input("\n[~] Ingrese los puertos a escanear separados por comas (ej: 22,80,443): ")
+       target = input("\n[~] Enter the host or IP to Scan: ")
+       ports = input("\n[~] Enter the Ports To Scan, separated by commas (eg: 22,80,443): ")
        os.system(f"nmap -p {ports} {target}")
     elif var == "3":
-       target = input("\n[~] Ingrese el host o IP a escanear: ")
+       target = input("\n[~] Enter the host or IP to Scan: ")
        os.system(f"nmap -sV {target}")
     elif var == "4":
-       target = input("\n[~] Ingrese el host o IP a escanear: ")
+       target = input("\n[~] Enter the host or IP to Scan: ")
        os.system(f"nmap -O {target}")
     elif var == "5":
-       target = input("\n[~] Ingrese el host o IP a escanear: ")
+       target = input("\n[~] Enter the host or IP to Scan: ")
        os.system(f"nmap -F {target}")
     elif var == "6":
-       subnet = input("\n[~] Ingrese la sub-red a escanear (ej: 8.8.8.8/24): ")
+       subnet = input("\n[~] Enter a Subnet to Scan (eg: 8.8.8.8/24): ")
        os.system(f"nmap -sP {subnet}")
     elif var == "7":
-       target = input("\n[~] Ingrese el host o IP a escanear: ")
+       target = input("\n[~] Enter the host or IP to Scan: ")
        os.system(f"nmap -sS {target}")
     elif var == "8":
-       target = input("\n[~] Ingrese el host o IP a escanear: ")
+       target = input("\n[~] Enter the host or IP to Scan: ")
        os.system(f"nmap -sS -sV {target}")
     elif var == "9":
-       target = input("\n[~] Ingrese el host o IP a escanear: ")
+       target = input("\n[~] Enter the host or IP to Scan: ")
        os.system(f"nmap -sU {target}")
     elif var == "00":
        if platform.system() == "Linux":
