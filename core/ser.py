@@ -18,23 +18,23 @@ def ser_menu():
           ▐█▄█▌▐█▄▪▐█▐█▄▄▌▐█•█▌    ▐█▄▪▐█▐█▄▄▌▐█ ▪▐▌▐█•█▌▐███▌██▌▐▀
            ▀▀▀  ▀▀▀▀  ▀▀▀ .▀  ▀     ▀▀▀▀  ▀▀▀  ▀  ▀ .▀  ▀·▀▀▀ ▀▀▀ ·                                               
   |--------------------------------------------------------------------------------------------|
-  | [1] Sherlock - Encuentra distintos usuarios registrados en varias redes sociales.          |
-  | [2] Nexfil - Una herramienta OSINT para encontrar perfiles por nombre de usuario           |
-  | [3] XR-Search - Herramienta de busquedas de usuarios, propia de Fuckyou!                   |
-  | [00] Regresar Al Menu Principal                                                            |
-  | [99] Salir                                                                                 |
+  | [1] Sherlock - Find different registered users on various social networks.                 |
+  | [2] Nexfil - An OSINT Tool for finding profiles by username                                |
+  | [3] XR-Search - User search tool, specific to Fuckyou!                                     |
+  | [00] Return to Main Menu                                                                   |
+  | [99] Quit                                                                                  |
   |--------------------------------------------------------------------------------------------|
   """)
   var = input(f'\n{Fore.CYAN}root@fuckyou:~# ')
   # Sherlock ---
   if var == "1":
     if os.path.exists('tools/sherlock'):
-      print(f'\n{Fore.RED}[!] Sherlock ya existe')
-      ques = input(f'\n{Fore.GREEN}[?] Quieres iniciar la herramienta [Y/n]: ')
+      print(f'\n{Fore.RED}[!] Sherlock already exists')
+      ques = input(f'\n{Fore.GREEN}[?] Do you want to start the tool [Y/n]: ')
       if ques == "Y" or ques == "y":
-        usuario = input('\n[~] Ingresa un nombre de usuario: ')
+        usuario = input('\n[~] Enter a username: ')
         if usuario == "" or usuario == " ":
-            print(f'\n{Fore.RED}[!] Error debes de ingresar un usuario.')
+            print(f'\n{Fore.RED}[!] Error you must enter a username.')
         else:
             if platform.system() == "Linux":
               os.system(f"python3 tools/sherlock/sherlock/sherlock.py {usuario}")
@@ -46,26 +46,26 @@ def ser_menu():
         ser_menu()
     else:
       if platform.system() == "Linux":
-        print(f'\n{Fore.GREEN}[~] Instalando Sherlock...')
+        print(f'\n{Fore.GREEN}[~] Installing Sherlock...')
         os.system("git clone https://github.com/sherlock-project/sherlock.git && mv 'sherlock' tools/ && pip3 install -r tools/sherlock/requirements.txt")
-        print('\n[~] Sherlock instalado con exito.')
+        print('\n[~] Sherlock installed successfully.')
         time.sleep(2)
         ser_menu()
       else:
-        print(f'\n{Fore.GREEN}[~] Instalando Sherlock...')
+        print(f'\n{Fore.GREEN}[~] Installing Sherlock...')
         os.system("git clone https://github.com/sherlock-project/sherlock.git")
         shutil.move("sherlock/", "tools")
         os.system("python -m pip install -r tools/sherlock/requirements.txt")
-        print('\n[~] Sherlock instalado con exito.')
+        print('\n[~] Sherlock installed successfully.')
         time.sleep(2)
         ser_menu()
   # nexfil --
   elif var == "2":
     if os.path.exists('tools/nexfil'):
-      print(f'\n{Fore.RED}[!] Nexfil ya existe')
-      ques = input(f'\n{Fore.GREEN}[?] Quieres iniciar la herramienta [Y/n]: ')
+      print(f'\n{Fore.RED}[!] Nexfil already exists')
+      ques = input(f'\n{Fore.GREEN}[?] Do you want to start the tool [Y/n]: ')
       if ques == "Y" or ques == "y":
-        usuario = input('\n[~] Ingresa un nombre de usuario: ')
+        usuario = input('\n[~] Enter a username: ')
         os.chdir('tools/nexfil')
         os.system(f"python3 nexfil.py -u {usuario}")
       elif ques == "N" or ques == "n":
@@ -74,13 +74,13 @@ def ser_menu():
         ser_menu()
     else:
       if platform.system() == "Linux":
-        print(f'\n{Fore.GREEN}[~] Instalando Nexfil...')
+        print(f'\n{Fore.GREEN}[~] Installing Nexfil...')
         os.system("git clone https://github.com/thewhiteh4t/nexfil.git && mv 'nexfil' tools/ && pip3 install -r tools/nexfil/requirements.txt")
-        print('\n[~] Nexfil instalado con exito.')
+        print('\n[~] Nexfil installed successfully.')
         time.sleep(2)
         ser_menu()
       else:
-       print(f'\n{Fore.RED}[!] Nexfil no esta disponible para tu sistema operativo.')
+       print(f'\n{Fore.RED}[!] Nexfil is not available for your system.')
   # XR-Search  ------
   elif var == "3":
      if os.name == "nt":
@@ -94,15 +94,15 @@ def ser_menu():
        ██ ██  ██   ██            ██ ██      ██   ██ ██   ██ ██      ██   ██ 
       ██   ██ ██   ██       ███████ ███████ ██   ██ ██   ██  ██████ ██   ██"""
      print(logo)
-     usuario = input('\n[~] Ingresa el nombre del usuario: ')
+     usuario = input('\n[~] Enter a Username: ')
      sites = [f"https://github.com/{usuario}", f"https://twitter.com/{usuario}", f"https://instagram.com/{usuario}", f"https://www.reddit.com/user/{usuario}", f"https://www.pinterest.com/{usuario}", f"https://www.twitch.tv/{usuario}", f"https://xboxgamertag.com/search/{usuario}", f"https://open.spotify.com/user/{usuario}", f"https://www.roblox.com/user.aspx?username={usuario}", f"https://t.me/{usuario}", f"https://xvideos.com/profiles/{usuario}", f"https://www.youtube.com/user/{usuario}", f"https://gitlab.com/{usuario}", f"https://api.mojang.com/users/profiles/minecraft/{usuario}", f"https://www.codecademy.com/profiles/{usuario}", f"https://www.codewars.com/users/{usuario}", f"https://forum.hackthebox.eu/profile/{usuario}", f"https://replit.com/@{usuario}"]
      for url in sites:
         pagina = requests.get(url)
         final = re.findall(usuario, pagina.text)
         if final:
-            print(f'\n{Fore.GREEN}[  ✔️   ] Usuario encontrado! {url}')
+            print(f'\n{Fore.GREEN}[  ✔️   ] User found! {url}')
         else:
-            print(f'\n{Fore.RED}[!] Usuario no encontrado')
+            print(f'\n{Fore.RED}[!] User not found')
   # 00
   elif var == "00":
     if platform.system() == "Linux":
@@ -116,6 +116,6 @@ def ser_menu():
     exit()
   # error no input
   else:
-    print(f'\n{Fore.RED}[!] Error opcion invalida.')
+    print(f'\n{Fore.RED}[!] Error invalid option.')
     time.sleep(2)
     phish()
