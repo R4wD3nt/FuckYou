@@ -87,7 +87,7 @@ python -m pip install -r requirements.txt
 
 # Imagenes
 
-| Menu principal | Tools Installer |
+| Main Menu | Tools Installer |
 | -------------- | ----------------|
 |![Index](https://media.discordapp.net/attachments/995599976463859713/1074434907901800508/image.png?width=758&height=431)|![f](https://media.discordapp.net/attachments/995599976463859713/1074257408270016512/image.png?width=707&height=389)
 
