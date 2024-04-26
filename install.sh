@@ -44,7 +44,7 @@ function install() {
    pip3 install -r requirements.txt
    
    echo -e "\n\033[32m[✔] Installation complete."
-   echo -e "\n[~] Use the command: python3 fuckyou.py para iniciar la herramienta."
+   echo -e "\n[~] Use the command: python3 fuckyou.py start the tool."
 }
 
 install
